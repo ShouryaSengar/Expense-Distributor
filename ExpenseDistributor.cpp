@@ -25,6 +25,7 @@ int main()
 	cout << endl;
 
 	vector<vector<vector<double>>> allExpenseMatrix;
+	vector<double> totalExpense;
 
 	for (int k = 0; k < n; k++)
 	{
@@ -34,7 +35,6 @@ int main()
 		int expenseCtn;
 		cin >> expenseCtn;
 		cout << "\n";
-		vector<double> totalExpense;
 		double sum(0);
 		vector<vector<double>> expenseMatrix;
 		for (int i = 0; i < expenseCtn; i++)
