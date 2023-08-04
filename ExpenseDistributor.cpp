@@ -34,6 +34,8 @@ int main()
 		int expenseCtn;
 		cin >> expenseCtn;
 		cout << "\n";
+		vector<double> totalExpense;
+		double sum(0);
 		vector<vector<double>> expenseMatrix;
 		for (int i = 0; i < expenseCtn; i++)
 		{
@@ -41,6 +43,7 @@ int main()
 			cout << "Expense " << i + 1 << " : ";
 			int expense;
 			cin >> expense;
+			sum += expense;
 			cout << "Equally distributed? (1 for Yes, 0 for No): ";
 			int equalSplit;
 			cin >> equalSplit;
@@ -62,6 +65,7 @@ int main()
 					expenseItem.push_back(share);
 				}
 			}
+			totalExpense.push_back(sum);
 			expenseMatrix.push_back(expenseItem);
 			cout << endl;
 		}
@@ -90,6 +94,6 @@ int main()
 		}
 		cout << endl;
 	}
-	
+
 	return 0;
 }
