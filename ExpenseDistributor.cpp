@@ -69,5 +69,27 @@ int main()
 		allExpenseMatrix.push_back(expenseMatrix);
 	}
 
+	for (int i = 0; i < n; i++)
+	{
+		cout << "Expense Matrix for " << personNames[i] << ":" << endl;
+		cout << "Expense\t";
+		for (const string &person : personNames)
+		{
+			cout << person << "\t";
+		}
+		cout << endl;
+
+		for (int j = 0; j < allExpenseMatrix[i].size(); j++)
+		{
+			cout << "Exp" << j + 1 << "\t";
+			for (int k = 0; k < allExpenseMatrix[i][j].size(); k++)
+			{
+				cout << allExpenseMatrix[i][j][k] << "\t";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+	
 	return 0;
 }
