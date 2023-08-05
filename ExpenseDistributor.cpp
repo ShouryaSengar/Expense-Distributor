@@ -62,6 +62,27 @@ int main()
 		allExpenseMatrix.push_back(expenseMatrix);
 	}
 
+	// Total expenditure by each person from their pocket
+	vector<double> expensePaid;
+	// Total expense done of each person on self
+	vector<double> expenseDone(n, 0.0);
+
+	// Calculate the sum of each expense matrix and store in expensePaid, AND
+	// Calculate the sum of each column in the allExpenseMatrix and store in expenseDone
+	for (int i = 0; i < n; i++)
+	{
+		double matrixSum = 0.0;
+		for (int j = 0; j < allExpenseMatrix[i].size(); j++)
+		{
+			for (int k = 0; k < allExpenseMatrix[i][j].size(); k++)
+			{
+				expenseDone[k] += allExpenseMatrix[i][j][k];
+				matrixSum += allExpenseMatrix[i][j][k];
+			}
+		}
+		expensePaid.push_back(matrixSum);
+	}
+
 	// Display the Expense Matrix for each person
 	for (int i = 0; i < n; i++)
 	{
@@ -84,6 +105,21 @@ int main()
 		}
 		cout << endl;
 	}
+
+	// for (int i = 0; i < expensePaid.size(); i++)
+	// {
+	// 	cout << personNames[i] << " Expense from his pocket : " << expensePaid[i] << endl;
+	// 	cout << personNames[i] << " Expense from other's  pocket : " << expenseDone[i] << endl;
+	// 	cout << endl;
+	// }
+
+	// Calculate and display the amount to be paid(-)/taken(+) to/from each person
+	cout << "Amount to be paid(-)/taken(+) to/from each person:" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		double settlement = expensePaid[i] - expenseDone[i];
+		cout << personNames[i] << ": " << settlement << endl;
+	}	
 
 	return 0;
 }
