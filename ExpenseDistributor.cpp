@@ -5,12 +5,8 @@ using namespace std;
 int main()
 {
 	int n = 0;
-	cout << endl;
-	cout << "*****************************Welcome to Expense Distributor**************************************"
-		 << "\n";
-	cout << endl;
-	cout << "Number of PERSON's involved: "
-		 << "\n";
+	cout << "***************************** Welcome to Expense Distributor **************************************" << endl;
+	cout << "Number of PERSON's involved: ";
 	cin >> n;
 	cout << endl;
 	vector<string> personNames;
@@ -25,17 +21,13 @@ int main()
 	cout << endl;
 
 	vector<vector<vector<double>>> allExpenseMatrix;
-	vector<double> totalExpense;
 
 	for (int k = 0; k < n; k++)
 	{
 		cout << "************************************** " << personNames[k] << "'s Expenses ***************************************" << endl;
-		cout << "\n";
-		cout << "Total number of Expenses : ";
+		cout << "Total number of Expenses: ";
 		int expenseCtn;
 		cin >> expenseCtn;
-		cout << "\n";
-		double sum(0);
 		vector<vector<double>> expenseMatrix;
 		for (int i = 0; i < expenseCtn; i++)
 		{
@@ -43,7 +35,6 @@ int main()
 			cout << "Expense " << i + 1 << " : ";
 			int expense;
 			cin >> expense;
-			sum += expense;
 			cout << "Equally distributed? (1 for Yes, 0 for No): ";
 			int equalSplit;
 			cin >> equalSplit;
@@ -65,14 +56,13 @@ int main()
 					expenseItem.push_back(share);
 				}
 			}
-			totalExpense.push_back(sum);
 			expenseMatrix.push_back(expenseItem);
 			cout << endl;
 		}
-		cout << endl;
 		allExpenseMatrix.push_back(expenseMatrix);
 	}
 
+	// Display the Expense Matrix for each person
 	for (int i = 0; i < n; i++)
 	{
 		cout << "Expense Matrix for " << personNames[i] << ":" << endl;
