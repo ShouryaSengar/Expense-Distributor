@@ -1,0 +1,29 @@
+***************************** Welcome to Expense Distributor **************************************
+
+Expense Matrix for SHOURYA:
+Expense	SHOURYA	SACHIN	KHURANA	
+Exp1	56		56		56		
+Exp2	0		1083	0		
+
+Expense Matrix for SACHIN:
+Expense	SHOURYA	SACHIN	KHURANA	
+Exp1	333		333		333		
+Exp2	61.5	61.5	0		
+Exp3	550		550		0		
+Exp4	0		97.5	97.5		
+Exp5	0		10		10		
+Exp6	0		15		15		
+Exp7	0		20		34		
+
+Expense Matrix for KHURANA:
+Expense	SHOURYA	SACHIN	KHURANA	
+Exp1	333		333		333		
+Exp2	90		90		90		
+Exp3	0		16.5	16.5		
+Exp4	0		30		50		
+Exp5	0		1083	0		
+
+Amount to be paid(-)/taken(+) to/from each person:
+SHOURYA: -172.5
+SACHIN: -1257.5
+KHURANA: 1430
